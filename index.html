@@ -6,6 +6,24 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
     <title>Webfonts Test</title>
+    <style>
+        .sample {
+            display: flex;
+            flex-direction: column;
+            flex: 0 0;
+            border: 1px solid black;
+            padding:  5px;
+        }
+
+        .transform {
+            display: flex;
+            margin: 10px;
+        }
+
+        .style {
+            width: 30%;
+        }
+    </style>
 </head>
 <body>
     <div id="app">Loading...</div>
@@ -13,10 +31,10 @@
         <div>
             font-transform, font-style, font-weight
             <div v-for="font in fonts">
-                <p>{{font.family}}</p>
-                <div v-for="transform in transforms">
-                    <div v-for="style in styles">
-                        <div v-for="weight in weights">
+                <h1>{{font.family}}</h1>
+                <div v-for="transform in transforms" class="transform">
+                    <div v-for="style in styles" class="style">
+                        <div v-for="weight in weights" class="sample">
                             <span>{{transform}}, {{style}}, {{weight}}: </span>
                             <span :style="{'font-family': font.family, 'text-transform': transform, 'font-style': style, 'font-weight': weight}">{{phrase}}</span>
                         </div>
