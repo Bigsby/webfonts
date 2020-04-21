@@ -49,15 +49,24 @@ const transforms = [ //text-transform
 
 const styles = [ //font-style
     "normal",
-    "italic",
-    "oblique"
+    "italic"
 ];
 
 const weights = [ //font-weight
-    "normal",
-    "bold",
-    "bolder",
-    "lighter"
+    // "normal",
+    // "bold",
+    // "bolder",
+    // "lighter",
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    600,
+    700,
+    800,
+    900
 ];
 
 const app = new Vue({
